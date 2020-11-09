@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RoverX</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/../views/rovers/stylesheet.css">
+    <link rel="stylesheet" href="/css/commons.css">
+</head>
+<body>
+
+    <%- include("../navbar/navbar") %>
+
+    <div class="section-wrapper" id="gallery">
+        <div class="row" style="margin-top: 30px;">
+            <div class="col m3 s12">
+                <div class="row" style="margin-top: 15px;">
+                    <div class="col s10 push-s1">
+                        <div class="card-panel" id="catPanel">
+                            <div class="row"><a id="r1" class="btn btn-flat clicked">Rover 2019<i class="fa fa-caret-left right" aria-hidden="true"></i></a></div>
+                            <div class="row"><a id="r2" class="btn btn-flat">Rover 2018<i class="fa fa-caret-left caret right" aria-hidden="true"></i></a></div>
+                            <div class="row"><a id="r3" class="btn btn-flat">Rover 2017<i class="fa fa-caret-left caret right" aria-hidden="true"></i></a></div>
+                            <div class="row"><a id="r4" class="btn btn-flat">Rover 2016<i class="fa fa-caret-left caret right" aria-hidden="true"></i></a></div>
+                            <div class="row"><a id="r5" class="btn btn-flat">Rover 2015<i class="fa fa-caret-left caret right" aria-hidden="true"></i></a></div>
+                            <!--<div class="row"><a id="r3" class="btn btn-flat">Rover 3<i class="fa fa-caret-left caret right" aria-hidden="true"></i></a></div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="r1_c" class="col m8 s12 cont hide">
+                <div class="row card-panel" style="padding: 0">
+                    <div class="card">
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-image">
+                              <img class="materialboxed" src="/Rovers/Yuvaan_ShubhBhai.jpg">
+                            </div>
+
+                        </div>
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-content" style="text-align: justify;">
+                                <h5>Yuvaan</h5>
+                                <br>
+                                <p>
+                                    Built for the URC 2020, Yuvaan retained our signature four-wheel double rocker suspension for its high strength to weight ratio, uniform weight distribution, and increased stability. Featuring a revamped autonomous system with a custom framework that emphasized terrain mapping and contingencies, it allowed for efficient path pre-processing, avoiding non-traversable terrain while improving reliability. The science system of the rover however was the star of the show incorporating various techniques like spectral analysis, wet chemical analysis, and image processing. All these factors enabled Yuvaan to outshine its competition in the IRC 2020 where it ranked 2nd in Asia.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="r2_c" class="col m8 s12 cont hide">
+                <div class="row card-panel" style="padding: 0">
+                    <div class="card">
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-image">
+                              <img class="materialboxed" src="/Rovers/Kratos_HarshitBhai.jpg">
+                            </div>
+
+                        </div>
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-content" style="text-align: justify;">
+                                <h5>Kratos</h5>
+                                <br>
+                                <p>
+                                    2018 saw Team Roverx work on a new rover with concentration on enhancing the core design and architecture. Kratos was designed with the goal of achieving a high strength to weight ratio and making the rover more compact. The team was successful in reducing the weight by 20% in comparison to the previous rover Ares. We shifted to a 4-wheel model which employed a double rocker suspension with a bar differential. A combination of motors and actuators were used to create a manipulator with 6 degrees of freedom. The electrical department shifted the entire power distribution assembly and control system onto custom made PCBs to increase space and energy efficiency. The communication with the rover was established using ROS framework. A fully automated light weight soil collection mechanism was designed to provide a detailed soil profile. 
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="r3_c" class="col m8 s12 cont hide">
+                <div class="row card-panel" style="padding: 0">
+                    <div class="card">
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-image">
+                              <img class="materialboxed" src="/Rovers/Ares_PranavBhai.jpg">
+                            </div>
+
+                        </div>
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-content" style="text-align: justify;">
+                                <h5>Ares</h5>
+                                <br>
+                                <p>
+                                    Ares was the team's debut rover in the University Rover Challenge held in 2018. The main objective while designing Ares was to simplify the design, have onboard backup systems and ease of control to make sure tasks are completed with ease. With a chassis designed with a factor of safety of about 3 and a three rocker suspension system, the rover could traverse extreme martian terrain with ease. The rover was also equipped with a state of the art science system employing site selection and documentation, sensor data acquisition, sample caching and laboratory analysis. With all these features, the rover was fully equipped to assist astronauts on martian missions and proved itself in competition.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="r4_c" class="col m8 s12 cont">
+                <div class="row card-panel" style="padding: 0">
+                    <div class="card">
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-image">
+                                <img class="materialboxed" src="http://res.cloudinary.com/team-roverx/image/upload/v1504630220/rover2016_2_fffgkg.jpg">
+                            </div>
+
+                        </div>
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-content" style="text-align: justify;">
+                                <h5>Enigma MK2</h5>
+                                <br>
+                                <p>
+                                    The latest edition of the Mars rover, named Enigma MK2, was designed and fabricated by Team RoverX for ERC 2016, Poland. It was well monitored in terms of safety, scalability and reliability. The Rover also provided wireless capability to establish a reliable connection with the base station. It also had GPS technology embedded in it to display its current location. In addition to these, it also featured two manipulators and other electrical housings mounted on an aluminium frame. The rover employed a total of 4 cameras mounted at different positions in order to aid rover operation during various tasks with ease.  It was also equipped with a custom-made safety system which is designed to ensure the safety for the rover in emergency situations. The complete assembly weighed 49kgs.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="r5_c" class="col m8 s12 cont hide">
+                <div class="row card-panel" style="padding: 0">
+                    <div class="card">
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-image">
+                              <img class="materialboxed" src="http://res.cloudinary.com/team-roverx/image/upload/v1504630220/rover2015_2_iu71p6.jpg">
+                            </div>
+
+                        </div>
+                        <div class="col m6 s12" style="flex-grow: 1">
+
+                            <div class="card-content" style="text-align: justify;">
+                                <h5>Enigma MK1</h5>
+                                <br>
+                                <p>
+                                    The Rover, Enigma MK1, marked our team's debut in representing our college and country in international competitions such as the ERC, Poland. In doing so, it gathered huge appreciation from other teams, besides winning several accolades and setting the benchmark for our future rovers. This rover featured 3 independent rocker suspension systems, with the maximum angle of rotation of its rocker being 45°, and a good ground clearance of 100mm. It could easily be controlled from any personal computer (connected to the same Wi-Fi network) using a Secure Shell (SSH), without the need for any extra software and video feeds. All its features made the Rover prepared to perform its required Science, Blind Terrain Traverse, Maintenance and Assistance tasks
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include("../footer/footer") %>
+
+    <script src="/javascript/jquery.js"></script>
+    <script src="/javascript/materialize.min.js"></script>
+    <script src="/javascript/inc.js"></script>
+    <script src="/javascript/smooth-scroll.min.js"></script>
+    <script src="/javascript/scrollTop.js"></script>
+    <script src="/../views/rovers/script.js"></script>
+    <script>
+        var side=function () {
+            $('.button-collapse').sideNav({
+                    menuWidth: 300, // Default is 300
+                    edge: 'right', // Choose the horizontal origin
+                    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                    draggable: true // Choose whether you can drag to open on touch screens
+                }
+            );
+            $('.dropdown-button').dropdown();
+        };
+    </script>
+</body>
+</html>
