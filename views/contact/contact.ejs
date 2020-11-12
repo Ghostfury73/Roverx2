@@ -131,6 +131,12 @@
             window.open($('#link').attr('href'), '_blank');
           })
         });
+        $(function () {
+            smoothScroll.init();
+            $('.row').picturehover();
+            $('#head').inc('../navbar/navbar.html',null,side);
+            $('#footer').inc('../footer/footer.html');
+        });
     </script>
 </body>
 </html>
