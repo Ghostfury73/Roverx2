@@ -25,60 +25,104 @@ app.get("/", function(req, res){
     res.render("index");
 });
 
+//	ROVERS ROUTE
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
 app.get("/rovers", function(req, res){
     console.log("GET: /rovers")
     res.render("rovers/rovers")
-})
+});
 
+//	COMPETITIONS ROUTE
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
 app.get("/competitions", function(req, res){
     console.log("GET: /competitions")
     res.render("competitions/competitions")
-})
+});
 
+//	TEAM ROUTES
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
 app.get("/team/current", function(req, res){
     console.log("GET: /team/current")
     res.render("team/team2020")
-})
+});
 
 app.get("/team/team2019", function(req, res){
     console.log("GET: /team/team2019")
     res.render("team/team2019")
-})
+});
 
 app.get("/team/team2018", function(req, res){
     console.log("GET: /team/team2018")
     res.render("team/team2018")
-})
+});
 
 app.get("/team/team2017", function(req, res){
     console.log("GET: /team/team2017")
     res.render("team/team2017")
-})
+});
 
 app.get("/team/team2016", function(req, res){
     console.log("GET: /team/team2016")
     res.render("team/team2016")
-})
+});
 
 app.get("/team/team2015", function(req, res){
     console.log("GET: /team/team2015")
     res.render("team/team2015")
-})
+});
 
+//	MEDIA ROUTE
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
 app.get("/media", function(req, res){
     console.log("GET: /media")
     res.render("media/media")
-})
+});
 
+//	SPONSORS ROUTE
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
 app.get("/sponsors", function(req, res){
     console.log("GET: /sponsors")
     res.render("sponsors/sponsors")
-})
+});
 
+//	CONTACT ROUTE
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
 app.get("/contact", function(req, res){
     console.log("GET: /contact")
     res.render("contact/contact")
-})
+});
+
+//	LEAVE US A MESSAGE ROUTE
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+//------------------------------------------------------------------------------------------------------------------------------------------------------//
+app.post("/leaveusamessage", function(req, res){
+    console.log("POST: /leaveusamessage")
+    var smtpTransport = nodemailer.createTransport({
+        service: 'gmail', 
+        auth: {
+          user: 'roverteam.vit@gmail.com',
+          pass: 'kqoolgrqdwqvsriy'
+        }
+    });
+    var mailOptions = {
+        to: 'roverteam.vit@gmail.com',
+        from: 'roverteam.vit@gmail.com',
+        subject: 'Someone left us a message',
+        text: 'Someone left us a message from the website.\n\n' +
+          'Name: ' + req.body.name + '\n' +
+          'E-mail: ' + req.body.email + '\n\n' +
+          req.body.msg
+    };
+    smtpTransport.sendMail(mailOptions, function(err) {
+        console.log('mail sent');
+    });
+});
 
 //======================================================================================================================================================//
 //																		  SERVER

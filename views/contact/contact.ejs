@@ -15,7 +15,7 @@
     <div id="landingWrapper" style="background-color: #212121;">
         <div>
             <%- include("../navbar/navbar") %>
-            <div style="height: 150px;"><h1 class="white-text center-align" style="line-height: 150px;">Contact</h1></div>
+            <div style="height: 150px;"><h1 class="white-text center-align" style="line-height: 150px;">Suport Us</h1></div>
         </div>
     </div>
 
@@ -47,7 +47,12 @@
         </div>
         <div class="row">
             <h5 style="font-size: 30px;">How can you <br> <span class="greenText">Support us ?</span></h5>
-            <p style="text-align: center"><img src="../Assets/HCYSU.jpeg" style="width: 25%"></p>
+            <div class="container" style="flex-grow: 1;">
+                <p><b>Components: </b>Be a part of our venture by providing us with the technical components that we require for reaching our goal</p>
+                <p><b>Financial Support: </b>We use only the best components for our rover, and because of this reason, we are always open to outer financial support</p>
+                <p><b>Technical Support: </b>We are also open to any technical support/guidance in our field of work. We discover new challenges everyday. Your industrial expertise can help us a lot.</p>
+            </div>
+                <!-- <p style="text-align: center"><img src="../Assets/HCYSU.jpeg" style="width: 25%"></p> -->
         </div>
         <div id="brochure" class="row">
           <h3><span class="greenText">B</span>rochure</h3>
@@ -77,27 +82,27 @@
                     <div class="row">
                         <h5>Leave us a message</h5>
                         <div id="contact">
-                            <form action="#">
+                            <form action="/leaveusamessage" method="POST">
                                 <div class="row">
                                     <div class="col m5 s12 input-field">
-                                        <input id="name" type="text">
+                                        <input id="name" name="name" type="text">
                                         <label for="name">NAME</label>
                                     </div>
                                     <div class="col m7 s12 input-field">
-                                        <input id="email" type="text">
+                                        <input id="email" name="email" type="text">
                                         <label for="email">E-MAIL</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col m8 s12 input-field">
-                                        <textarea id="message" class="materialize-textarea"></textarea>
+                                        <textarea id="message" name="msg" class="materialize-textarea"></textarea>
                                         <label for="message">MESSAGE</label>
                                     </div>
                                 </div>
+                                <div class="row" style="position: relative">
+                                    <button id="submit" type="submit" class="btn btn-flat">SUBMIT</button>
+                                </div>
                             </form>
-                        </div>
-                        <div class="row" style="position: relative">
-                            <button id="submit" type="submit" class="btn btn-flat">SUBMIT</button>
                         </div>
                     </div>
                 </div>
