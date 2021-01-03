@@ -103,25 +103,26 @@ app.get("/contact", function(req, res){
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
 app.post("/leaveusamessage", function(req, res){
     console.log("POST: /leaveusamessage")
-    var smtpTransport = nodemailer.createTransport({
-        service: 'gmail', 
-        auth: {
-          user: 'roverteam.vit@gmail.com',
-          pass: 'kqoolgrqdwqvsriy'
-        }
-    });
-    var mailOptions = {
-        to: 'roverteam.vit@gmail.com',
-        from: 'roverteam.vit@gmail.com',
-        subject: 'Someone left us a message',
-        text: 'Someone left us a message from the website.\n\n' +
-          'Name: ' + req.body.name + '\n' +
-          'E-mail: ' + req.body.email + '\n\n' +
-          req.body.msg
-    };
-    smtpTransport.sendMail(mailOptions, function(err) {
-        console.log('mail sent');
-    });
+    res.redirect('/')
+    // var smtpTransport = nodemailer.createTransport({
+    //     service: 'gmail', 
+    //     auth: {
+    //       user: 'roverteam.vit@gmail.com',
+    //       pass: ''
+    //     }
+    // });
+    // var mailOptions = {
+    //     to: 'roverteam.vit@gmail.com',
+    //     from: 'roverteam.vit@gmail.com',
+    //     subject: 'Someone left us a message',
+    //     text: 'Someone left us a message from the website.\n\n' +
+    //       'Name: ' + req.body.name + '\n' +
+    //       'E-mail: ' + req.body.email + '\n\n' +
+    //       req.body.msg
+    // };
+    // smtpTransport.sendMail(mailOptions, function(err) {
+    //     console.log('mail sent');
+    // });
 });
 
 //======================================================================================================================================================//
