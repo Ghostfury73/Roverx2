@@ -46,6 +46,11 @@ app.get("/competitions", function(req, res){
 //------------------------------------------------------------------------------------------------------------------------------------------------------//
 app.get("/team/current", function(req, res){
     console.log("GET: /team/current")
+    res.render("team/team2021")
+});
+
+app.get("/team/team2020", function(req, res){
+    console.log("GET: /team/team2020")
     res.render("team/team2020")
 });
 
